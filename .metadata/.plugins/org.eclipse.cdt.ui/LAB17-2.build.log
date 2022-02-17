@@ -1,0 +1,8 @@
+18:40:41 **** Rebuild of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o LAB17-2.exe "src\\LAB17-2.o" "src\\LinkedList.o" 
+
+18:40:42 Build Finished. 0 errors, 0 warnings. (took 668ms)
+
