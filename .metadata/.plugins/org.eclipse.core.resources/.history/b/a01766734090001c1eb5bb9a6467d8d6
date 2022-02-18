@@ -1,0 +1,30 @@
+#ifndef ARTICULOS_H_
+#define ARTICULOS_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+typedef struct
+{
+	int id;
+	char articulo[50];
+	char medida[50];
+	float precio;
+	int rubroId;
+
+
+}eArticulo;
+eArticulo* articulos_new();
+eArticulo* articulos_newParametros(char* id, char* articulo, char* medida, char* precio, char* rubroId);
+void articulo_delete(eArticulo* this);
+int articulo_setId(eArticulo* this, int id);
+int articulo_getId(eArticulo* this, int* id);
+int articulo_setArticulo(eArticulo* this, char* articulo);
+it articulo_getArticulo(eArticulo* this, char* articulo);
+
+
+
+
+
+#endif /* ARTICULOS_H_ */

@@ -1,0 +1,11 @@
+#include "LinkedList.h"
+
+eArticulo* articulos_new()
+{
+	eArticulo* pArticulo;
+	pArticulo=(eArticulo*)malloc(sizeof(eArticulo));
+
+	return pArticulo;
+}
+
+eArticulo* articulos_newPara

@@ -1,5 +1,934 @@
-18:40:41 **** Rebuild of configuration Debug for project LAB17-2 ****
+19:06:08 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:15:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   15 |  printf("1- Abrir archivo De libros\n"
+      |  ^~~~~~
+..\src\General.c:15:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\General.c:10:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    9 | #include "General.h"
+  +++ |+#include <stdio.h>
+   10 | ///brief: menu para el main
+..\src\General.c: In function 'subMenu':
+..\src\General.c:33:2: warning: incompatible implicit declaration of built-in function 'printf'
+   33 |  printf("Archivos disponibles:\n"
+      |  ^~~~~~
+..\src\General.c:33:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c: In function 'ingresarEnteroConMaximo':
+..\src\General.c:45:2: warning: incompatible implicit declaration of built-in function 'printf'
+   45 |  printf("%s",mensaje);
+      |  ^~~~~~
+..\src\General.c:45:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:46:9: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   46 |  while((scanf("%d%c", &numeroIngresado, &term) != 2 || term != '\n')||(numeroIngresado<1 || numeroIngresado>maximo))
+      |         ^~~~~
+..\src\General.c:46:9: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\General.c:46:9: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:49:3: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]
+   49 |   fflush(stdin);
+      |   ^~~~~~
+..\src\General.c:49:10: error: 'stdin' undeclared (first use in this function)
+   49 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:49:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:49:10: note: each undeclared identifier is reported only once for each function it appears in
+..\src\General.c: In function 'pedirString':
+..\src\General.c:60:3: warning: incompatible implicit declaration of built-in function 'printf'
+   60 |   printf("%s \n",mensaje);
+      |   ^~~~~~
+..\src\General.c:60:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:61:10: error: 'stdin' undeclared (first use in this function)
+   61 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:61:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:62:3: warning: incompatible implicit declaration of built-in function 'scanf'
+   62 |   scanf("%[^\n]",stringIngresado);
+      |   ^~~~~
+..\src\General.c:62:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:64:3: warning: implicit declaration of function 'lowerToUpper' [-Wimplicit-function-declaration]
+   64 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: At top level:
+..\src\General.c:79:6: warning: conflicting types for 'lowerToUpper'
+   79 | void lowerToUpper(char array[])
+      |      ^~~~~~~~~~~~
+..\src\General.c:64:3: note: previous implicit declaration of 'lowerToUpper' was here
+   64 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: In function 'lowerToUpper':
+..\src\General.c:82:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   82 |  strcpy(auxiliar,array);
+      |  ^~~~~~
+..\src\General.c:82:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\General.c:10:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    9 | #include "General.h"
+  +++ |+#include <string.h>
+   10 | ///brief: menu para el main
+..\src\General.c:83:2: warning: implicit declaration of function 'strlwr' [-Wimplicit-function-declaration]
+   83 |  strlwr(auxiliar);
+      |  ^~~~~~
+..\src\General.c:84:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   84 |  for(int i=0; i<strlen(auxiliar);i++)
+      |                 ^~~~~~
+..\src\General.c:84:17: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\General.c:84:17: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c:86:17: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+   86 |   auxiliar[0] = toupper(auxiliar[0]);
+      |                 ^~~~~~~
+..\src\General.c: In function 'validacionString':
+..\src\General.c:98:16: warning: incompatible implicit declaration of built-in function 'strlen'
+   98 |  for(int i=0;i<strlen(array);i++)
+      |                ^~~~~~
+..\src\General.c:98:16: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c: In function 'MensajeDeError':
+..\src\General.c:120:3: warning: incompatible implicit declaration of built-in function 'printf'
+  120 |   printf("%s",mensaje);
+      |   ^~~~~~
+..\src\General.c:120:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:122:3: warning: incompatible implicit declaration of built-in function 'printf'
+  122 |   printf("%s",mensajeError);
+      |   ^~~~~~
+..\src\General.c:122:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+19:07:16 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:7:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    7 |  printf("1- Abrir archivo De libros\n"
+      |  ^~~~~~
+..\src\General.c:7:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\General.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "General.h"
+  +++ |+#include <stdio.h>
+    2 | ///brief: menu para el main
+..\src\General.c: In function 'subMenu':
+..\src\General.c:25:2: warning: incompatible implicit declaration of built-in function 'printf'
+   25 |  printf("Archivos disponibles:\n"
+      |  ^~~~~~
+..\src\General.c:25:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c: In function 'ingresarEnteroConMaximo':
+..\src\General.c:37:2: warning: incompatible implicit declaration of built-in function 'printf'
+   37 |  printf("%s",mensaje);
+      |  ^~~~~~
+..\src\General.c:37:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:38:9: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   38 |  while((scanf("%d%c", &numeroIngresado, &term) != 2 || term != '\n')||(numeroIngresado<1 || numeroIngresado>maximo))
+      |         ^~~~~
+..\src\General.c:38:9: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\General.c:38:9: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:41:3: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]
+   41 |   fflush(stdin);
+      |   ^~~~~~
+..\src\General.c:41:10: error: 'stdin' undeclared (first use in this function)
+   41 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:41:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:41:10: note: each undeclared identifier is reported only once for each function it appears in
+..\src\General.c: In function 'pedirString':
+..\src\General.c:52:3: warning: incompatible implicit declaration of built-in function 'printf'
+   52 |   printf("%s \n",mensaje);
+      |   ^~~~~~
+..\src\General.c:52:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:53:10: error: 'stdin' undeclared (first use in this function)
+   53 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:53:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:54:3: warning: incompatible implicit declaration of built-in function 'scanf'
+   54 |   scanf("%[^\n]",stringIngresado);
+      |   ^~~~~
+..\src\General.c:54:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:56:3: warning: implicit declaration of function 'lowerToUpper' [-Wimplicit-function-declaration]
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: At top level:
+..\src\General.c:71:6: warning: conflicting types for 'lowerToUpper'
+   71 | void lowerToUpper(char array[])
+      |      ^~~~~~~~~~~~
+..\src\General.c:56:3: note: previous implicit declaration of 'lowerToUpper' was here
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: In function 'lowerToUpper':
+..\src\General.c:74:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   74 |  strcpy(auxiliar,array);
+      |  ^~~~~~
+..\src\General.c:74:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\General.c:2:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    1 | #include "General.h"
+  +++ |+#include <string.h>
+    2 | ///brief: menu para el main
+..\src\General.c:75:2: warning: implicit declaration of function 'strlwr' [-Wimplicit-function-declaration]
+   75 |  strlwr(auxiliar);
+      |  ^~~~~~
+..\src\General.c:76:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   76 |  for(int i=0; i<strlen(auxiliar);i++)
+      |                 ^~~~~~
+..\src\General.c:76:17: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\General.c:76:17: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c:78:17: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+   78 |   auxiliar[0] = toupper(auxiliar[0]);
+      |                 ^~~~~~~
+..\src\General.c: In function 'validacionString':
+..\src\General.c:90:16: warning: incompatible implicit declaration of built-in function 'strlen'
+   90 |  for(int i=0;i<strlen(array);i++)
+      |                ^~~~~~
+..\src\General.c:90:16: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c: In function 'MensajeDeError':
+..\src\General.c:112:3: warning: incompatible implicit declaration of built-in function 'printf'
+  112 |   printf("%s",mensaje);
+      |   ^~~~~~
+..\src\General.c:112:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:114:3: warning: incompatible implicit declaration of built-in function 'printf'
+  114 |   printf("%s",mensajeError);
+      |   ^~~~~~
+..\src\General.c:114:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+19:07:54 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:7:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    7 |  printf("1- Abrir archivo De libros\n"
+      |  ^~~~~~
+..\src\General.c:7:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\General.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "General.h"
+  +++ |+#include <stdio.h>
+    2 | ///brief: menu para el main
+..\src\General.c: In function 'subMenu':
+..\src\General.c:25:2: warning: incompatible implicit declaration of built-in function 'printf'
+   25 |  printf("Archivos disponibles:\n"
+      |  ^~~~~~
+..\src\General.c:25:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c: In function 'ingresarEnteroConMaximo':
+..\src\General.c:37:2: warning: incompatible implicit declaration of built-in function 'printf'
+   37 |  printf("%s",mensaje);
+      |  ^~~~~~
+..\src\General.c:37:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:38:9: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   38 |  while((scanf("%d%c", &numeroIngresado, &term) != 2 || term != '\n')||(numeroIngresado<1 || numeroIngresado>maximo))
+      |         ^~~~~
+..\src\General.c:38:9: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\General.c:38:9: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:41:3: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]
+   41 |   fflush(stdin);
+      |   ^~~~~~
+..\src\General.c:41:10: error: 'stdin' undeclared (first use in this function)
+   41 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:41:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:41:10: note: each undeclared identifier is reported only once for each function it appears in
+..\src\General.c: In function 'pedirString':
+..\src\General.c:52:3: warning: incompatible implicit declaration of built-in function 'printf'
+   52 |   printf("%s \n",mensaje);
+      |   ^~~~~~
+..\src\General.c:52:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:53:10: error: 'stdin' undeclared (first use in this function)
+   53 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:53:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:54:3: warning: incompatible implicit declaration of built-in function 'scanf'
+   54 |   scanf("%[^\n]",stringIngresado);
+      |   ^~~~~
+..\src\General.c:54:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:56:3: warning: implicit declaration of function 'lowerToUpper' [-Wimplicit-function-declaration]
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: At top level:
+..\src\General.c:71:6: warning: conflicting types for 'lowerToUpper'
+   71 | void lowerToUpper(char array[])
+      |      ^~~~~~~~~~~~
+..\src\General.c:56:3: note: previous implicit declaration of 'lowerToUpper' was here
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: In function 'lowerToUpper':
+..\src\General.c:74:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   74 |  strcpy(auxiliar,array);
+      |  ^~~~~~
+..\src\General.c:74:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\General.c:2:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    1 | #include "General.h"
+  +++ |+#include <string.h>
+    2 | ///brief: menu para el main
+..\src\General.c:75:2: warning: implicit declaration of function 'strlwr' [-Wimplicit-function-declaration]
+   75 |  strlwr(auxiliar);
+      |  ^~~~~~
+..\src\General.c:76:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   76 |  for(int i=0; i<strlen(auxiliar);i++)
+      |                 ^~~~~~
+..\src\General.c:76:17: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\General.c:76:17: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c:78:17: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+   78 |   auxiliar[0] = toupper(auxiliar[0]);
+      |                 ^~~~~~~
+..\src\General.c: In function 'validacionString':
+..\src\General.c:90:16: warning: incompatible implicit declaration of built-in function 'strlen'
+   90 |  for(int i=0;i<strlen(array);i++)
+      |                ^~~~~~
+..\src\General.c:90:16: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c: In function 'MensajeDeError':
+..\src\General.c:112:3: warning: incompatible implicit declaration of built-in function 'printf'
+  112 |   printf("%s",mensaje);
+      |   ^~~~~~
+..\src\General.c:112:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:114:3: warning: incompatible implicit declaration of built-in function 'printf'
+  114 |   printf("%s",mensajeError);
+      |   ^~~~~~
+..\src\General.c:114:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+19:08:20 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:7:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+    7 |  printf("1- Abrir archivo De libros\n"
+      |  ^~~~~~
+..\src\General.c:7:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\General.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "General.h"
+  +++ |+#include <stdio.h>
+    2 | ///brief: menu para el main
+..\src\General.c: In function 'subMenu':
+..\src\General.c:25:2: warning: incompatible implicit declaration of built-in function 'printf'
+   25 |  printf("Archivos disponibles:\n"
+      |  ^~~~~~
+..\src\General.c:25:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c: In function 'ingresarEnteroConMaximo':
+..\src\General.c:37:2: warning: incompatible implicit declaration of built-in function 'printf'
+   37 |  printf("%s",mensaje);
+      |  ^~~~~~
+..\src\General.c:37:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:38:9: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   38 |  while((scanf("%d%c", &numeroIngresado, &term) != 2 || term != '\n')||(numeroIngresado<1 || numeroIngresado>maximo))
+      |         ^~~~~
+..\src\General.c:38:9: warning: incompatible implicit declaration of built-in function 'scanf'
+..\src\General.c:38:9: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:41:3: warning: implicit declaration of function 'fflush' [-Wimplicit-function-declaration]
+   41 |   fflush(stdin);
+      |   ^~~~~~
+..\src\General.c:41:10: error: 'stdin' undeclared (first use in this function)
+   41 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:41:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:41:10: note: each undeclared identifier is reported only once for each function it appears in
+..\src\General.c: In function 'pedirString':
+..\src\General.c:52:3: warning: incompatible implicit declaration of built-in function 'printf'
+   52 |   printf("%s \n",mensaje);
+      |   ^~~~~~
+..\src\General.c:52:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:53:10: error: 'stdin' undeclared (first use in this function)
+   53 |   fflush(stdin);
+      |          ^~~~~
+..\src\General.c:53:10: note: 'stdin' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+..\src\General.c:54:3: warning: incompatible implicit declaration of built-in function 'scanf'
+   54 |   scanf("%[^\n]",stringIngresado);
+      |   ^~~~~
+..\src\General.c:54:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+..\src\General.c:56:3: warning: implicit declaration of function 'lowerToUpper' [-Wimplicit-function-declaration]
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: At top level:
+..\src\General.c:71:6: warning: conflicting types for 'lowerToUpper'
+   71 | void lowerToUpper(char array[])
+      |      ^~~~~~~~~~~~
+..\src\General.c:56:3: note: previous implicit declaration of 'lowerToUpper' was here
+   56 |   lowerToUpper(stringIngresado);
+      |   ^~~~~~~~~~~~
+..\src\General.c: In function 'lowerToUpper':
+..\src\General.c:74:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+   74 |  strcpy(auxiliar,array);
+      |  ^~~~~~
+..\src\General.c:74:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\General.c:2:1: note: include '<string.h>' or provide a declaration of 'strcpy'
+    1 | #include "General.h"
+  +++ |+#include <string.h>
+    2 | ///brief: menu para el main
+..\src\General.c:75:2: warning: implicit declaration of function 'strlwr' [-Wimplicit-function-declaration]
+   75 |  strlwr(auxiliar);
+      |  ^~~~~~
+..\src\General.c:76:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   76 |  for(int i=0; i<strlen(auxiliar);i++)
+      |                 ^~~~~~
+..\src\General.c:76:17: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\General.c:76:17: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c:78:17: warning: implicit declaration of function 'toupper' [-Wimplicit-function-declaration]
+   78 |   auxiliar[0] = toupper(auxiliar[0]);
+      |                 ^~~~~~~
+..\src\General.c: In function 'validacionString':
+..\src\General.c:90:16: warning: incompatible implicit declaration of built-in function 'strlen'
+   90 |  for(int i=0;i<strlen(array);i++)
+      |                ^~~~~~
+..\src\General.c:90:16: note: include '<string.h>' or provide a declaration of 'strlen'
+..\src\General.c: In function 'MensajeDeError':
+..\src\General.c:112:3: warning: incompatible implicit declaration of built-in function 'printf'
+  112 |   printf("%s",mensaje);
+      |   ^~~~~~
+..\src\General.c:112:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+..\src\General.c:114:3: warning: incompatible implicit declaration of built-in function 'printf'
+  114 |   printf("%s",mensajeError);
+      |   ^~~~~~
+..\src\General.c:114:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+19:08:36 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+In file included from ..\src\General.c:1:
+..\src\General.h:27:2: error: #endif without #if
+   27 | #endif /* GENERAL_H_ */
+      |  ^~~~~
+19:08:42 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+In file included from ..\src\General.c:1:
+..\src\General.h:27:2: error: #endif without #if
+   27 | #endif /* GENERAL_H_ */
+      |  ^~~~~
+19:08:50 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+In file included from ..\src\General.c:1:
+..\src\General.h:27:2: error: #endif without #if
+   27 | #endif /* GENERAL_H_ */
+      |  ^~~~~
+19:08:51 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+In file included from ..\src\General.c:1:
+..\src\General.h:27:2: error: #endif without #if
+   27 | #endif /* GENERAL_H_ */
+      |  ^~~~~
+19:08:58 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:57:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   57 |   while(auxiliar==-1)
+      |        ^
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\controller.o" "src\\parser.o" 
+20:07:54 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Rubro.o" "..\\src\\Rubro.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+..\src\Articulos.c: In function 'articulos_newParametros':
+..\src\Articulos.c:18:4: warning: implicit declaration of function 'libro_setId' [-Wimplicit-function-declaration]
+   18 |    libro_setId(pArticulo, atoi(id));
+      |    ^~~~~~~~~~~
+..\src\Articulos.c:19:4: warning: implicit declaration of function 'libro_setTitulo' [-Wimplicit-function-declaration]
+   19 |    libro_setTitulo(pArticulo, articulo);
+      |    ^~~~~~~~~~~~~~~
+..\src\Articulos.c:20:4: warning: implicit declaration of function 'libro_setAutor' [-Wimplicit-function-declaration]
+   20 |    libro_setAutor(pArticulo, medida);
+      |    ^~~~~~~~~~~~~~
+..\src\Articulos.c:21:4: warning: implicit declaration of function 'libro_setPrecio'; did you mean 'articulo_setPrecio'? [-Wimplicit-function-declaration]
+   21 |    libro_setPrecio(pArticulo, atof(precio));
+      |    ^~~~~~~~~~~~~~~
+      |    articulo_setPrecio
+..\src\Articulos.c:22:4: warning: implicit declaration of function 'libro_setIdEditorial' [-Wimplicit-function-declaration]
+   22 |    libro_setIdEditorial(pArticulo, atoi(rubroId));
+      |    ^~~~~~~~~~~~~~~~~~~~
+..\src\Articulos.c: In function 'articulo_setId':
+..\src\Articulos.c:44:7: warning: statement with no effect [-Wunused-value]
+   44 |   this->id;
+      |   ~~~~^~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:7:42: error: expected ')' before ';' token
+    7 |  printf("1- Abrir archivo De Articulos\n"
+      |                                          ^
+      |                                          )
+......
+   11 |      "5- Generar lista con descuento";
+      |                                      ~    
+..\src\General.c:11:39: error: expected ';' before '}' token
+   11 |      "5- Generar lista con descuento";
+      |                                       ^
+      |                                       ;
+   12 | }
+      | ~                                      
+20:08:17 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'menu':
+..\src\General.c:7:42: error: expected ')' before ';' token
+    7 |  printf("1- Abrir archivo De Articulos\n"
+      |                                          ^
+      |                                          )
+......
+   11 |      "5- Generar lista con descuento";
+      |                                      ~    
+..\src\General.c:11:39: error: expected ';' before '}' token
+   11 |      "5- Generar lista con descuento";
+      |                                       ^
+      |                                       ;
+   12 | }
+      | ~                                      
+20:08:24 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:43:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   43 |   while(auxiliar==-1)
+      |        ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'parser_articuloFromText':
+..\src\parser.c:19:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fscanf'
+   19 |  fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,articulo,medida,precio,rubroId);
+      |  ^~~~~~
+..\src\parser.c:23:3: error: 'pArticulo' undeclared (first use in this function); did you mean 'eArticulo'?
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |   ^~~~~~~~~
+      |   eArticulo
+..\src\parser.c:23:3: note: each undeclared identifier is reported only once for each function it appears in
+..\src\parser.c:23:14: warning: implicit declaration of function 'libro_newParametros'; did you mean 'articulos_newParametros'? [-Wimplicit-function-declaration]
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              articulos_newParametros
+..\src\parser.c:25:3: warning: implicit declaration of function 'libro_getId' [-Wimplicit-function-declaration]
+   25 |   libro_getId(pArticulo, &idAux);
+      |   ^~~~~~~~~~~
+20:09:01 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:43:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   43 |   while(auxiliar==-1)
+      |        ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'parser_articuloFromText':
+..\src\parser.c:19:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fscanf'
+   19 |  fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,articulo,medida,precio,rubroId);
+      |  ^~~~~~
+..\src\parser.c:23:3: error: 'pArticulo' undeclared (first use in this function); did you mean 'eArticulo'?
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |   ^~~~~~~~~
+      |   eArticulo
+..\src\parser.c:23:3: note: each undeclared identifier is reported only once for each function it appears in
+..\src\parser.c:23:14: warning: implicit declaration of function 'libro_newParametros'; did you mean 'articulos_newParametros'? [-Wimplicit-function-declaration]
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              articulos_newParametros
+..\src\parser.c:25:3: warning: implicit declaration of function 'libro_getId' [-Wimplicit-function-declaration]
+   25 |   libro_getId(pArticulo, &idAux);
+      |   ^~~~~~~~~~~
+20:09:44 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'parser_articuloFromText':
+..\src\parser.c:19:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fscanf'
+   19 |  fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,articulo,medida,precio,rubroId);
+      |  ^~~~~~
+..\src\parser.c:23:3: error: 'pArticulo' undeclared (first use in this function); did you mean 'eArticulo'?
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |   ^~~~~~~~~
+      |   eArticulo
+..\src\parser.c:23:3: note: each undeclared identifier is reported only once for each function it appears in
+..\src\parser.c:23:14: warning: implicit declaration of function 'libro_newParametros'; did you mean 'articulos_newParametros'? [-Wimplicit-function-declaration]
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              articulos_newParametros
+..\src\parser.c:25:3: warning: implicit declaration of function 'libro_getId' [-Wimplicit-function-declaration]
+   25 |   libro_getId(pArticulo, &idAux);
+      |   ^~~~~~~~~~~
+20:10:29 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'parser_articuloFromText':
+..\src\parser.c:23:14: warning: implicit declaration of function 'libro_newParametros'; did you mean 'articulos_newParametros'? [-Wimplicit-function-declaration]
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              articulos_newParametros
+..\src\parser.c:23:12: warning: assignment to 'eArticulo *' {aka 'struct <anonymous> *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   23 |   pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+      |            ^
+..\src\parser.c:25:3: warning: implicit declaration of function 'libro_getId' [-Wimplicit-function-declaration]
+   25 |   libro_getId(pArticulo, &idAux);
+      |   ^~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:18: undefined reference to `libro_setId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `libro_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:20: undefined reference to `libro_setAutor'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:21: undefined reference to `libro_setPrecio'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:22: undefined reference to `libro_setIdEditorial'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:11:07 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:18: undefined reference to `libro_setId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `libro_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:20: undefined reference to `libro_setAutor'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:21: undefined reference to `libro_setPrecio'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:22: undefined reference to `libro_setIdEditorial'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:11:35 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:18: undefined reference to `libro_setId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `libro_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:20: undefined reference to `libro_setAutor'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:21: undefined reference to `libro_setPrecio'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:22: undefined reference to `libro_setIdEditorial'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:13:25 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:18: undefined reference to `libro_setId'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `libro_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:20: undefined reference to `libro_setAutor'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:21: undefined reference to `libro_setPrecio'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:22: undefined reference to `libro_setIdEditorial'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:13:44 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+..\src\Articulos.c: In function 'articulos_newParametros':
+..\src\Articulos.c:19:4: warning: implicit declaration of function 'articulo_setTitulo'; did you mean 'articulo_setArticulo'? [-Wimplicit-function-declaration]
+   19 |    articulo_setTitulo(pArticulo, articulo);
+      |    ^~~~~~~~~~~~~~~~~~
+      |    articulo_setArticulo
+..\src\Articulos.c: In function 'articulo_setId':
+..\src\Articulos.c:44:7: warning: statement with no effect [-Wunused-value]
+   44 |   this->id;
+      |   ~~~~^~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `articulo_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:13:57 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Articulos.o: in function `articulos_newParametros':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/Articulos.c:19: undefined reference to `articulo_setTitulo'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:14:16 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+..\src\Articulos.c: In function 'articulo_setId':
+..\src\Articulos.c:44:7: warning: statement with no effect [-Wunused-value]
+   44 |   this->id;
+      |   ~~~~^~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:15:28 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:15:48 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:23: undefined reference to `libro_newParametros'
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:16:08 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'parser_articuloFromText':
+..\src\parser.c:25:3: warning: implicit declaration of function 'libro_getId' [-Wimplicit-function-declaration]
+   25 |   libro_getId(pArticulo, &idAux);
+      |   ^~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:16:22 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:16:37 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:16:46 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\parser.o: in function `parser_articuloFromText':
+C:\Users\brake\Desktop\LAB17-2\LAB17-2\Debug/../src/parser.c:25: undefined reference to `libro_getId'
+collect2.exe: error: ld returned 1 exit status
+20:17:24 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+Info: Nothing to build for LAB17-2
+Info: Nothing to build for LAB17-2
+Info: Nothing to build for LAB17-2
+Info: Nothing to build for LAB17-2
+20:20:44 **** Incremental Build of configuration Debug for project LAB17-2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o LAB17-2.exe "src\\LAB17-2.o" "src\\LinkedList.o" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:22:56 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:24:24 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:28:45 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:29:15 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LAB17-2.c:20:7: warning: unused variable 'auxiliar' [-Wunused-variable]
+   20 |  char auxiliar[20];
+      |       ^~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:30:35 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:30:45 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:31:08 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:31:23 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:31:36 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:31:52 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:32:07 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:32:20 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:32:29 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:32:41 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:32:51 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:33:41 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LAB17-2.c:20:7: warning: unused variable 'auxiliar' [-Wunused-variable]
+   20 |  char auxiliar[20];
+      |       ^~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:35:12 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:35:57 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+Info: Nothing to build for LAB17-2
+20:37:03 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+Info: Nothing to build for LAB17-2
+20:37:58 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:38:47 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:38:59 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:37:23: warning: multi-character character constant [-Wmultichar]
+   37 |    if(strcmp(auxiliar,'juan')==0)
+      |                       ^~~~~~
+..\src\LAB17-2.c:37:23: warning: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ..\src\LAB17-2.c:13:
+c:\mingw\include\string.h:77:60: note: expected 'const char *' but argument is of type 'int'
+   77 | _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+      |                                                            ^~~~~~~~~~~~
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:39:15 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:39:28 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LAB17-2.c:20:7: warning: unused variable 'auxiliar' [-Wunused-variable]
+   20 |  char auxiliar[50];
+      |       ^~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+20:39:58 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:24:14: warning: variable 'pArrayListListaConDescuento' set but not used [-Wunused-but-set-variable]
+   24 |  LinkedList* pArrayListListaConDescuento=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\LAB17-2.c:20:7: warning: unused variable 'auxiliar' [-Wunused-variable]
+   20 |  char auxiliar[50];
+      |       ^~~~~~~~
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+21:00:25 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_saveArticulosAsTxt':
+..\src\controller.c:76:19: error: 'this' undeclared (first use in this function)
+   76 |  if(path!=NULL && this!=NULL)
+      |                   ^~~~
+..\src\controller.c:76:19: note: each undeclared identifier is reported only once for each function it appears in
+21:00:51 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+..\src\LAB17-2.c: In function 'main':
+..\src\LAB17-2.c:20:7: warning: unused variable 'auxiliar' [-Wunused-variable]
+   20 |  char auxiliar[50];
+      |       ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Articulos.o" "..\\src\\Articulos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+..\src\parser.c: In function 'saveArticuloAsText':
+..\src\parser.c:43:16: error: too few arguments to function 'll_get'
+   43 |  for(int i=0;i<ll_get(pArrayListArticulo);i++)
+      |                ^~~~~~
+In file included from ..\src\parser.h:11,
+                 from ..\src\parser.c:9:
+..\src\LinkedList.h:33:7: note: declared here
+   33 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+21:02:32 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file LAB17-2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:02:38 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+21:03:30 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
+21:09:19 **** Incremental Build of configuration Debug for project LAB17-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:43:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   43 |   while(auxiliar==-1)
+      |        ^
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 

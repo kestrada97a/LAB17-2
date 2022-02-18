@@ -1,0 +1,27 @@
+#include "LinkedList.h"
+
+eArticulo* articulos_new()
+{
+	eArticulo* pArticulo;
+	pArticulo=(eArticulo*)malloc(sizeof(eArticulo));
+
+	return pArticulo;
+}
+
+eArticulo* articulos_newParametros(char* id, char* articulo, char* medida, char* precio, char* rubroId)
+{
+	eArticulo* pArticulo;
+	pArticulo=articulos_new();
+
+	if(pArticulo!=NULL && id!=NULL && articulo!=NULL && medida!=NULL && precio!=NULL && rubroId!=NULL)
+		{
+			libro_setId(pArticulo, atoi(id));
+			libro_setTitulo(pArticulo, articulo);
+			libro_setAutor(pArticulo, medida);
+			libro_setPrecio(pArticulo, atof(precio));
+			libro_setIdEditorial(pArticulo, atoi(rubroId));
+
+		}
+
+		return pArticulo;
+}

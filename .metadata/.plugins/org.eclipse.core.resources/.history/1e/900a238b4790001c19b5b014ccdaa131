@@ -1,0 +1,30 @@
+/*
+ * parser.c
+ *
+ *  Created on: 17 feb. 2022
+ *      Author: brake
+ */
+
+
+#include "parser.h"
+int parser_articuloFromText(FILE* pFile, LinkedList* pArrayListArticulo)
+{
+	int idAux;
+	char id[100];
+	char articulo[100];
+	char medida[100];
+	char precio[100];
+	char rubroId[100];
+	eArticulo* pArticulo;
+	fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,articulo,medida,precio,rubroId);
+	while(!feof(pFile))
+	{
+		fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,articulo,medida,precio,rubroId);
+		pArticulo= libro_newParametros(id, articulo, medida, precio, rubroId);
+		ll_add(pArrayListArticulo,pArticulo);
+		libro_getId(pArticulo, &idAux);
+	}
+	return idAux;
+
+
+}

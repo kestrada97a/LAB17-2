@@ -1,0 +1,15 @@
+/*
+ * controller.c
+ *
+ *  Created on: 17 feb. 2022
+ *      Author: brake
+ */
+#include "controller.h"
+int controller_loadArticuloFromText(char* path, LinkedList* pArrayListArticulo)
+{
+	int idAux=-1;
+	FILE* pFile;
+	if (pArrayListLibro!=NULL && path!=NULL)
+
+}
+

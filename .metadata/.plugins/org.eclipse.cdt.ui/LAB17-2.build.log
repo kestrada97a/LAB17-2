@@ -1,8 +1,12 @@
-18:40:41 **** Rebuild of configuration Debug for project LAB17-2 ****
+21:09:19 **** Incremental Build of configuration Debug for project LAB17-2 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LAB17-2.o" "..\\src\\LAB17-2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o LAB17-2.exe "src\\LAB17-2.o" "src\\LinkedList.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\General.o" "..\\src\\General.c" 
+..\src\General.c: In function 'pedirString':
+..\src\General.c:43:8: warning: 'auxiliar' is used uninitialized in this function [-Wuninitialized]
+   43 |   while(auxiliar==-1)
+      |        ^
+gcc -o LAB17-2.exe "src\\Articulos.o" "src\\General.o" "src\\LAB17-2.o" "src\\LinkedList.o" "src\\Rubro.o" "src\\controller.o" "src\\parser.o" 
 
-18:40:42 Build Finished. 0 errors, 0 warnings. (took 668ms)
+21:09:20 Build Finished. 0 errors, 1 warnings. (took 718ms)
 
